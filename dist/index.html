@@ -8,8 +8,15 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/home.css" />
     <title>Restaurant page</title>
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
   </head>
   <body>
     <div id="content">
@@ -22,36 +29,32 @@
         </div>
       </div>
 
-      <div class="header">
-        <h1>MoonLight</h1>
-        <h3>Lights your coffee</h3>
-      </div>
-
       <div class="slogan-section">
-        <p class="slogan">
+        <div class="slogan">
           Everyone should believe in something. I believe I will have another
           coffee.
-        </p>
-        <div class="coffee-image">
-          <img src="../src/omid-armin-1UKx5_hhFLA-unsplash.jpg" alt="" />
+        </div>
+        <img
+          class="coffee-img"
+          src="../src/assets/omid-armin-1UKx5_hhFLA-unsplash.jpg"
+          alt="coffee-image"
+        />
+      </div>
+
+      <div class="timing-section">
+        <h2 class="timing-heading">Timmings <i class="bi bi-alarm-fill"></i></h2>
+        <div class="timing-grid">
+          <div class="grid-item">Sunday: 8am - 8pm</div>
+          <div class="grid-item">Monday: 6am - 6pm</div>
+          <div class="grid-item">Tuesday: 6am - 6pm</div>
+          <div class="grid-item">Wednesday: 6am - 6pm</div>
+          <div class="grid-item">Thursday: 6am - 10pm</div>
+          <div class="grid-item">Friday: 6am - 10pm</div>
+          <div class="grid-item">Saturday: 8am - 10pm</div>
         </div>
       </div>
 
-      <div class="timming-section">
-          <div class="timming-grid">
-              <div class="grid-item">Sunday: 8am - 8pm</div>
-              <div class="grid-item">Monday: 6am - 6pm</div>
-              <div class="grid-item">Tuesday: 6am - 6pm</div>
-              <div class="grid-item">Wednesday: 6am - 6pm</div>
-              <div class="grid-item">Thursday: 6am - 10pm</div>
-              <div class="grid-item">Friday: 6am - 10pm</div>
-              <div class="grid-item">Saturday: 8am - 10pm</div>
-          </div>
-      </div>
-
-      <div class="location-section">
-          124,New Delhi,India
-      </div>
+      <div class="footer">Made by Rajat <a target="blank" href="https://github.com/rajat4984"><i class="bi bi-github"></i></a> </div>
     </div>
   </body>
 </html>

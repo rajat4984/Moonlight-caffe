@@ -1,1 +1,3 @@
-console.log("hehllo")
+import homeFunction from "./pages/home.js"
+
+homeFunction()
