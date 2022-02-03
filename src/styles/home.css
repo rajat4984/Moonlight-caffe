@@ -27,7 +27,7 @@ a {
 
 .navbar {
   background-color: var(--green);
-  padding: 2%;
+  padding: 3%;
   display: flex;
   justify-content: space-between;
   color: var(--white);
@@ -61,6 +61,7 @@ a {
   padding: 5%;
   background-color: var(--beige);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -119,10 +120,62 @@ a {
   color: var(--white);
 }
 
-
-
-
-
 /* ----------------MEDIA QUERIES-------------------------------- */
 
+@media screen and (max-width: 890px) {
+  .slogan {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+  }
+  .slogan-section {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 
+  .coffee-img {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .timing-heading {
+    font-size: 2rem;
+  }
+  .timing-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .brand {
+      font-size: 1.3rem;
+  }
+  .tabs{
+      font-size: 1rem;
+  }
+  .slogan {
+    font-size: 1.7rem;
+    text-align: center;
+    width: 100%;
+    padding: 1em 0;
+  }
+  .slogan-section {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .coffee-img {
+    width: 40%;
+    border-radius: 50%;
+  }
+
+  .timing-heading {
+    font-size: 1.7rem;
+  }
+  .timing-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
