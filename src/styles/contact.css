@@ -54,11 +54,12 @@ body {
   cursor: pointer;
   transition: .3s;
   border: 1px solid var(--white);
+  font-weight: bolder;
 }
 
 .flex-item > button:hover{
   background-color: var(--white);
-  color: black;
+  color: var(--green);
   border: 1px solid var(--green);
 }
 
