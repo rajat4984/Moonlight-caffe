@@ -6,7 +6,7 @@ export default function homeFunction() {
   const navBar = document.createElement("div");
   const brand = document.createElement("div");
   const moonIcon = document.createElement("i");
-  let tabs = document.createElement("div");
+  const tabs = document.createElement("div");
   const tabItem1 = document.createElement("div");
   const tabItem2 = document.createElement("div");
   const tabItem3 = document.createElement("div");
@@ -14,10 +14,9 @@ export default function homeFunction() {
   navBar.classList.add("navbar");
   brand.classList.add("brand");
   moonIcon.classList.add("bi", "bi-moon-fill");
-  tabs.classList.add("tabs");
-  tabItem1.classList.add("tab-item");
-  tabItem2.classList.add("tab-item");
-  tabItem3.classList.add("tab-item");
+
+  classListFunc([tabs], "tabs");
+  classListFunc([tabItem1, tabItem2, tabItem3], "tab-item");
 
   brand.textContent = "Moonlight ";
   tabItem1.textContent = "Home";
@@ -75,27 +74,33 @@ export default function homeFunction() {
   timingGrid.classList.add("timing-grid");
   clockIcon.classList.add("bi", "bi-alarm-fill");
 
-  gridItem1.classList.add("grid-item");
-  gridItem2.classList.add("grid-item");
-  gridItem3.classList.add("grid-item");
-  gridItem4.classList.add("grid-item");
-  gridItem5.classList.add("grid-item");
-  gridItem6.classList.add("grid-item");
-  gridItem7.classList.add("grid-item");
+  classListFunc(
+    [
+      gridItem1,
+      gridItem2,
+      gridItem3,
+      gridItem4,
+      gridItem5,
+      gridItem6,
+      gridItem7,
+    ],
+    "grid-item"
+  );
 
-  timingHeading.append(clockIcon);
-  timingGrid.append(gridItem1);
-  timingGrid.append(gridItem2);
-  timingGrid.append(gridItem3);
-  timingGrid.append(gridItem4);
-  timingGrid.append(gridItem5);
-  timingGrid.append(gridItem6);
-  timingGrid.append(gridItem7);
+  appendElement(timingHeading, [clockIcon]);
+  appendElement(timingGrid, [
+    gridItem1,
+    gridItem2,
+    gridItem3,
+    gridItem4,
+    gridItem5,
+    gridItem6,
+    gridItem7,
+  ]);
 
-  timingSection.appendChild(timingHeading);
-  timingSection.appendChild(timingGrid);
+  appendElement(timingSection, [timingHeading, timingGrid]);
 
-  content.appendChild(timingSection);
+  appendElement(content, [timingSection]);
 
   // -------------------------FOOTER-------------------------------
   const footer = document.createElement("div");
@@ -106,20 +111,25 @@ export default function homeFunction() {
   anchorTag.setAttribute("target", "blank");
   anchorTag.setAttribute("href", "https://github.com/rajat4984");
 
-  footer.classList.add("footer");
   gitIcon.classList.add("bi", "bi-github");
 
-  footer.appendChild(anchorTag);
-  footer.appendChild(gitIcon);
+  classListFunc([footer], "footer");
 
-  content.appendChild(footer);
+  appendElement(footer, [anchorTag, gitIcon]);
 
-  console.log(typeof tabs);
-  let newTabs = document.querySelectorAll(".tabs");
+  appendElement(content, [footer]);
 
-  newTabs.forEach((tab) => {
-    tab.addEventListener("click", (e) => {
-      return e.target.textContent;
-    });
-  });
+  //Apending function
+  function appendElement(el, arr) {
+    for (let i = 0; i < arr.length; i++) {
+      el.append(arr[i]);
+    }
+  }
+
+  //classlist function
+  function classListFunc(arr, className) {
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].classList.add(className);
+    }
+  }
 }

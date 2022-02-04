@@ -53,48 +53,41 @@ export default function contactFunction() {
   label4.textContent = "Mobile number"
   submitBtn.textContent = "Submit"
 
-  contactContainer.classList.add("contact-container")
-  contactForm.classList.add("contact-form")
-  flexItem1.classList.add("flex-item")
-  flexItem2.classList.add("flex-item")
-  flexItem3.classList.add("flex-item")
-  flexItem4.classList.add("flex-item")
-  flexItem5.classList.add("flex-item")
 
-  label1.classList.add("form-label")
-  label2.classList.add("form-label")
-  label3.classList.add("form-label")
-  label4.classList.add("form-label")
+  classListFunc([contactContainer],"contact-container")
+  classListFunc([contactForm],"contact-form")
 
-  input1.classList.add("form-input")
-  input2.classList.add("form-input")
-  input3.classList.add("form-input")
-  input4.classList.add("form-input")
-  submitBtn.classList.add("submit-btn")
+  classListFunc([flexItem1,flexItem2,flexItem3,flexItem4,flexItem5],"flex-item")
 
-  flexItem5.append(submitBtn)
+  classListFunc([label1,label2,label3,label4],"form-label")
 
-  flexItem4.append(label4)
-  flexItem4.append(input4)
-  flexItem3.append(label3)
-  flexItem3.append(input3)
-  flexItem2.append(label2)
-  flexItem2.append(input2)
-  flexItem1.append(label1)
-  flexItem1.append(input1)
+  classListFunc([input1,input2,input3,input4],"form-input")
+  classListFunc([submitBtn],"submit-btn")
 
-  contactForm.appendChild(flexItem1)
-  contactForm.appendChild(flexItem2)
-  contactForm.appendChild(flexItem3)
-  contactForm.appendChild(flexItem4)
-  contactForm.appendChild(flexItem5)
+  appendElement(flexItem5,[submitBtn])
 
-  contactContainer.appendChild(contactForm)
+  appendElement(flexItem4,[label4,input4])
+  appendElement(flexItem3,[label3,input3])
+  appendElement(flexItem2,[label2,input2])
+  appendElement(flexItem1,[label1,input1])
 
-  content.appendChild(contactContainer)
+  appendElement(contactForm,[flexItem1,flexItem2,flexItem3,flexItem4,flexItem5])
+
+  appendElement(contactContainer,[contactForm])
+  appendElement(content,[contactContainer])
 
 
+  //Apending function
+  function appendElement(el,arr){
+    for (let i = 0; i < arr.length; i++) {
+      el.append(arr[i])
+    }
+  }
 
-  // --------------------FOOTER-----------------------------
+  function classListFunc(arr,className){
+    for (let i = 0; i < arr.length; i++) {
+      arr[i].classList.add(className)
+    }
+  }
 }
 
