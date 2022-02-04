@@ -44,7 +44,7 @@ body {
   border: none;
 }
 
-.flex-item > button{
+.submit-btn{
   background-color: var(--green);
   color: var(--white);
   font-size: 1rem;
@@ -57,7 +57,7 @@ body {
   font-weight: bolder;
 }
 
-.flex-item > button:hover{
+.submit-btn:hover{
   background-color: var(--white);
   color: var(--green);
   border: 1px solid var(--green);
@@ -80,10 +80,10 @@ body {
 
   .form-label{
     font-size: 1.3rem;
-    flex-basis: 50%;
+    flex-basis: 100%;
   }
 
-  .flex-item > button{
+  .submit-btn{
     margin: 1em 1em;
     margin-right: auto;
   }
