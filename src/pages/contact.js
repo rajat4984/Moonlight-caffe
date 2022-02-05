@@ -19,7 +19,7 @@ export default function contactFunction() {
   tabItem2.classList.add("tab-item");
   tabItem3.classList.add("tab-item");
 
-  brand.textContent = "Contact us ";
+  brand.textContent = "Moonlight ";
   tabItem1.textContent = "Home";
   tabItem2.textContent = "Menu";
   tabItem3.textContent = "Contact";
@@ -31,12 +31,19 @@ export default function contactFunction() {
 
   //   ---------------------CONTACT FORM----------------------------
   const contactContainer = document.createElement("div");
-  const contactForm = document.createElement("contact-form");
-  const flexItem1 = document.createElement("div");
-  const flexItem2 = document.createElement("div");
-  const flexItem3 = document.createElement("div");
-  const flexItem4 = document.createElement("div");
-  const flexItem5 = document.createElement("div");
+  const contactMenu = document.createElement("div");
+  const contactHeading = document.createElement("div");
+  const callIcon = document.createElement("i");
+  const contactGrid = document.createElement("div");
+  const contactItem1 = document.createElement("div");
+  const contactItem2 = document.createElement("div");
+  const contactItem3 = document.createElement("div");
+  const contactItem4 = document.createElement("div");
+  const contactItem5 = document.createElement("div");
+  const contactItem6 = document.createElement("div");
+  const contactItem7 = document.createElement("div");
+  const contactItem8 = document.createElement("div");
+  const contactItem9 = document.createElement("div");
   const label1 = document.createElement("label");
   const label2 = document.createElement("label");
   const label3 = document.createElement("label");
@@ -45,49 +52,78 @@ export default function contactFunction() {
   const input2 = document.createElement("input");
   const input3 = document.createElement("input");
   const input4 = document.createElement("input");
-  const submitBtn = document.createElement("button")
+  const submitBtn = document.createElement("button");
 
-  label1.textContent = "First name"
-  label2.textContent = "Last name"
-  label3.textContent = "Work email"
-  label4.textContent = "Mobile number"
-  submitBtn.textContent = "Submit"
+  label1.textContent = "First name";
+  label2.textContent = "Last name";
+  label3.textContent = "Work email";
+  label4.textContent = "Mobile number";
+  submitBtn.textContent = "Submit";
+  contactHeading.textContent = "Contact us ";
 
+  classListFunc([contactContainer], "contact-container");
+  classListFunc([contactMenu], "menu");
+  classListFunc([contactHeading], "menu-heading");
+  classListFunc([contactGrid], "contact-grid");
 
-  classListFunc([contactContainer],"contact-container")
-  classListFunc([contactForm],"contact-form")
+  classListFunc(
+    [
+      contactItem1,
+      contactItem2,
+      contactItem3,
+      contactItem1,
+      contactItem4,
+      contactItem5,
+      contactItem6,
+      contactItem7,
+      contactItem8,
+      contactItem9,
+    ],
+    "contact-item"
+  );
 
-  classListFunc([flexItem1,flexItem2,flexItem3,flexItem4,flexItem5],"flex-item")
+  callIcon.classList.add( "bi", "bi-telephone-fill")
+  classListFunc([label1, label2, label3, label4], "form-label");
+  classListFunc([input1, input2, input3, input4], "form-input");
+  classListFunc([submitBtn], "submit-btn");
+  appendElement(contactItem9, [submitBtn]);
 
-  classListFunc([label1,label2,label3,label4],"form-label")
+  appendElement(contactItem1, [label1]);
+  appendElement(contactItem2, [input1]);
+  appendElement(contactItem3, [label2]);
+  appendElement(contactItem4, [input2]);
+  appendElement(contactItem5, [label3]);
+  appendElement(contactItem6, [input3]);
+  appendElement(contactItem7, [label4]);
+  appendElement(contactItem8, [input4]);
 
-  classListFunc([input1,input2,input3,input4],"form-input")
-  classListFunc([submitBtn],"submit-btn")
+  appendElement(contactGrid, [
+    contactItem1,
+    contactItem2,
+    contactItem3,
+    contactItem4,
+    contactItem5,
+    contactItem6,
+    contactItem7,
+    contactItem8,
+    contactItem9,
+  ]);
 
-  appendElement(flexItem5,[submitBtn])
-
-  appendElement(flexItem4,[label4,input4])
-  appendElement(flexItem3,[label3,input3])
-  appendElement(flexItem2,[label2,input2])
-  appendElement(flexItem1,[label1,input1])
-
-  appendElement(contactForm,[flexItem1,flexItem2,flexItem3,flexItem4,flexItem5])
-
-  appendElement(contactContainer,[contactForm])
-  appendElement(content,[contactContainer])
-
+  appendElement(contactHeading, [callIcon]);
+  appendElement(contactMenu, [contactHeading, contactGrid]);
+  appendElement(contactContainer, [contactMenu]);
+  appendElement(content, [contactContainer]);
 
   //Apending function
-  function appendElement(el,arr){
+  function appendElement(el, arr) {
     for (let i = 0; i < arr.length; i++) {
-      el.append(arr[i])
+      el.append(arr[i]);
     }
   }
 
-  function classListFunc(arr,className){
+  function classListFunc(arr, className) {
     for (let i = 0; i < arr.length; i++) {
-      arr[i].classList.add(className)
+      arr[i].classList.add(className);
     }
   }
 }
-

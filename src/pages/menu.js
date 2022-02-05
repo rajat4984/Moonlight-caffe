@@ -1,3 +1,5 @@
+import "../styles/menu.css";
+
 export default function menuFunction() {
   // ----------------------NAVBAR-----------------------------
   const navBar = document.createElement("div");
@@ -29,7 +31,7 @@ export default function menuFunction() {
   // ----------------------------CONTACT CONTAINER------------------------
   const contactContainer = document.createElement("div");
   const menu = document.createElement("div");
-  const glassIcon = document.createElement("i")
+  const glassIcon = document.createElement("i");
   const menuHeading = document.createElement("h1");
   const menuGrid = document.createElement("div");
   let menuItem1 = document.createElement("div");
@@ -78,41 +80,50 @@ export default function menuFunction() {
     menuItem21,
   ];
 
-  menuHeading.textContent = "Menu "
+  menuHeading.textContent = "Menu ";
 
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Tall"
-  menuItem2.textContent = "Caffee Latte"
-  menuItem2.textContent = "215"
-  menuItem2.textContent = "245"
-  menuItem2.textContent = "Cappuccino"
-  menuItem2.textContent = "215"
-  menuItem2.textContent = "245"
-  menuItem2.textContent = ""
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Short"
-  menuItem2.textContent = "Short"
+  const menuItemText = [
+    "",
+    "Short",
+    "Tall",
+    "Caffee ,Latte",
+    "215",
+    "245",
+    "Cappuccino",
+    "215",
+    "245",
+    "Flat",
+    "275",
+    "305",
+    "Americano",
+    "250",
+    "285",
+    "Catrammel Maechiato",
+    "275",
+    "300",
+    "Chocolate Cappucino",
+    "285",
+    "310",
+  ];
 
-  classListFunc([contactContainer],"contact-container")
-  classListFunc([menu],"menu")
-  classListFunc([menuGrid],"menu-grid")
-  classListFunc([menuHeading],"menu-heading")
-  glassIcon.classList.add("bi","bi-cup-straw")
+  appendText(menuItemArray, menuItemText);
 
+  classListFunc([contactContainer], "contact-container");
+  classListFunc([menu], "menu");
+  classListFunc([menuGrid], "menu-grid");
+  classListFunc([menuHeading], "menu-heading");
+  glassIcon.classList.add("bi", "bi-cup-straw");
 
-  classListFunc(menuItemArray,"menu-item")
+  classListFunc(menuItemArray, "menu-item");
 
-  appendElement(content,[contactContainer])
-  appendElement(contactContainer,[menu])
-  appendElement(menu,[menuHeading])
-  appendElement(menu,[menuGrid])
-  appendElement(menuGrid,menuItemArray)
-  appendElement(menuHeading,[glassIcon])
+  appendElement(content, [contactContainer]);
+  appendElement(contactContainer, [menu]);
+  appendElement(menu, [menuHeading]);
+  appendElement(menu, [menuGrid]);
+  appendElement(menuGrid, menuItemArray);
+  appendElement(menuHeading, [glassIcon]);
+
+  // -------------------------------FUNCTIONS----------------------------------------
 
   function appendElement(el, arr) {
     for (let i = 0; i < arr.length; i++) {
@@ -124,6 +135,12 @@ export default function menuFunction() {
   function classListFunc(arr, className) {
     for (let i = 0; i < arr.length; i++) {
       arr[i].classList.add(className);
+    }
+  }
+
+  function appendText(menuItemArr, menuTextArr) {
+    for (let i = 0; i < menuItemArr.length; i++) {
+      menuItemArr[i].textContent = menuTextArr[i];
     }
   }
 }
