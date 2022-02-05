@@ -3,9 +3,6 @@ import navbarComponent from "./navbar";
 export default function homeFunction() {
   const content = document.querySelector("#content");
 
-  // ----------------------NAVBAR-----------------------------
-  navbarComponent()
-
   // --------------------SLOGAN SECTION ------------------------------
   const sloganSection = document.createElement("div");
   const slogan = document.createElement("div");

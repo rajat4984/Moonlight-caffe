@@ -1,12 +1,9 @@
 import "../styles/contact.css";
-import menuFunction from "../pages/home.js"
+import menuFunction from "../pages/home.js";
 import navbarComponent from "./navbar";
 
 export default function contactFunction() {
   const content = document.querySelector("#content");
-
-  // ----------------------NAVBAR-----------------------------
-  navbarComponent()
 
   //   ---------------------CONTACT FORM----------------------------
   const contactContainer = document.createElement("div");
@@ -39,6 +36,7 @@ export default function contactFunction() {
   label4.textContent = "Mobile number";
   submitBtn.textContent = "Submit";
   contactHeading.textContent = "Contact us ";
+
 
   classListFunc([contactContainer], "contact-container");
   classListFunc([contactMenu], "menu");
@@ -105,17 +103,4 @@ export default function contactFunction() {
       arr[i].classList.add(className);
     }
   }
-
-  // const  selectTab = (e) =>{
-  //   if(e.target.textContent==="Home"){
-  //      menuFunction()
-  //   }
-  // }
-
-  // tabs.childNodes.forEach((node)=>{
-  //   node.addEventListener("click",selectTab)
-  // })
-
 }
-
-

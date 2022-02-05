@@ -2,8 +2,6 @@ import "../styles/menu.css";
 import navbarComponent from "./navbar";
 
 export default function menuFunction() {
-  // ----------------------NAVBAR-----------------------------
-navbarComponent()
 
   // ----------------------------CONTACT CONTAINER------------------------
   const contactContainer = document.createElement("div");
@@ -63,7 +61,7 @@ navbarComponent()
     "",
     "Short",
     "Tall",
-    "Caffee ,Latte",
+    "Caffee Latte",
     "215",
     "245",
     "Cappuccino",
