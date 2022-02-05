@@ -1,5 +1,4 @@
 import "../styles/menu.css";
-import navbarComponent from "./navbar";
 
 export default function menuFunction() {
 

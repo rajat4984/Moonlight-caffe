@@ -150,10 +150,10 @@ a {
 
 @media screen and (max-width: 670px) {
   .brand {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
-  .tabs{
-      font-size: 1rem;
+  .tabs {
+    font-size: 1rem;
   }
   .slogan {
     font-size: 1.7rem;

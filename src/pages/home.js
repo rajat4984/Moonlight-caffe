@@ -1,5 +1,5 @@
 import "../styles/home.css";
-import navbarComponent from "./navbar";
+
 export default function homeFunction() {
   const content = document.querySelector("#content");
 

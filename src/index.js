@@ -3,7 +3,6 @@ import contactFunction from "./pages/contact.js";
 import menuFunction from "./pages/menu.js";
 import navbarComponent from "./pages/navbar.js";
 
-
 navbarComponent();
 let newFunction = homeFunction;
 

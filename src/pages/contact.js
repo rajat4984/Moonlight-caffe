@@ -1,6 +1,4 @@
 import "../styles/contact.css";
-import menuFunction from "../pages/home.js";
-import navbarComponent from "./navbar";
 
 export default function contactFunction() {
   const content = document.querySelector("#content");
@@ -36,7 +34,6 @@ export default function contactFunction() {
   label4.textContent = "Mobile number";
   submitBtn.textContent = "Submit";
   contactHeading.textContent = "Contact us ";
-
 
   classListFunc([contactContainer], "contact-container");
   classListFunc([contactMenu], "menu");
