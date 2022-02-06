@@ -10,7 +10,7 @@ export default function homeFunction() {
 
   slogan.textContent =
     " Everyone should believe in something. I believe I will have another coffee";
-  img.setAttribute("src", "Moonlight-caffe/src/assets/omid-armin-1UKx5_hhFLA-unsplash.jpg");
+  img.setAttribute("src", "assets/omid-armin-1UKx5_hhFLA-unsplash.jpg");
   img.setAttribute("alt", "coffee-image");
 
   sloganSection.classList.add("slogan-section");
