@@ -23,8 +23,8 @@ a {
   color: var(--white);
 }
 
-#content {
-  height: 100vh;
+#content{
+  min-height: 100vh;
 }
 
 /* ------------------------------------NAVBAR------------------------------------------ */
@@ -122,6 +122,8 @@ a {
   text-align: center;
   background-color: var(--green);
   color: var(--white);
+  position: sticky;
+  top: 100%;
 }
 
 /* ----------------MEDIA QUERIES-------------------------------- */
