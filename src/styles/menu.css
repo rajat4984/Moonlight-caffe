@@ -27,6 +27,7 @@
 
 .menu-item:nth-child(3n+1){
     grid-column: 1/span 3;
+
 }
 
 @media screen and (max-width: 670px){
@@ -40,5 +41,6 @@
     .menu-item:nth-child(3n+1){
         font-size: 1.1rem;
         grid-column: 1/span 3;
+        width: 50%;
     }
 }

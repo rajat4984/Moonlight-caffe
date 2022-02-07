@@ -73,7 +73,7 @@ export default function menuFunction() {
     "Americano",
     "250",
     "285",
-    "Catrammel Maechiato",
+    "Carramel Maechiato",
     "275",
     "300",
     "Chocolate Cappucino",
