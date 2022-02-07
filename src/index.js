@@ -4,7 +4,7 @@ import menuFunction from "./pages/menu.js";
 import navbarComponent from "./pages/navbar.js";
 
 navbarComponent();
-let newFunction = homeFunction;
+let newFunction = contactFunction;
 
 newFunction();
 const content = document.querySelector("#content");

@@ -27,7 +27,7 @@ body {
 .form-input {
   font-size: 1rem;
   outline: none;
-  height: 60%;
+  height: 40px;
   border-radius: 5px;
   border: none;
 }
@@ -61,7 +61,7 @@ body {
     width: 110%;
   }
   .form-input {
-    height: 3vh;
+    height: 35px;
   }
 
   .form-label {

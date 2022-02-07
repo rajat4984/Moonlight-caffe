@@ -1,4 +1,5 @@
 import "../styles/menu.css";
+import footerFunction from "./footer";
 
 export default function menuFunction() {
 
@@ -96,6 +97,9 @@ export default function menuFunction() {
   appendElement(menu, [menuGrid]);
   appendElement(menuGrid, menuItemArray);
   appendElement(menuHeading, [glassIcon]);
+
+  // ------------------------------FOOTER----------------------------------------------
+  footerFunction()
 
   // -------------------------------FUNCTIONS----------------------------------------
 

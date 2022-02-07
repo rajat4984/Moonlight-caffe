@@ -1,5 +1,6 @@
 import "../styles/home.css";
-import coffeeImage from "../assets/coffee.jpg";
+import coffeeImage from "../../dist/92a122096778c03b71e3.jpg"
+import footerFunction from "./footer";
 
 export default function homeFunction() {
   const content = document.querySelector("#content");
@@ -13,8 +14,8 @@ export default function homeFunction() {
 
   slogan.textContent =
     " Everyone should believe in something. I believe I will have another coffee";
-  img.setAttribute("src", "assets/omid-armin-1UKx5_hhFLA-unsplash.jpg");
-  img.setAttribute("alt", "coffee-image");
+  img.setAttribute("src", "assets/coffee.jpg");
+  myCoffeeImage.setAttribute("alt", "coffee-image");
 
   sloganSection.classList.add("slogan-section");
   slogan.classList.add("slogan");
@@ -81,22 +82,8 @@ export default function homeFunction() {
   appendElement(content, [timingSection]);
 
   // -------------------------FOOTER-------------------------------
-  const footer = document.createElement("div");
-  const anchorTag = document.createElement("a");
-  const gitIcon = document.createElement("i");
-
-  footer.textContent = "Made by Rajat ";
-  anchorTag.setAttribute("target", "blank");
-  anchorTag.setAttribute("href", "https://github.com/rajat4984");
-
-  gitIcon.classList.add("bi", "bi-github");
-
-  classListFunc([footer], "footer");
-
-  appendElement(footer, [anchorTag, gitIcon]);
-
-  appendElement(content, [footer]);
-
+  footerFunction()
+  
   //Apending function
   function appendElement(el, arr) {
     for (let i = 0; i < arr.length; i++) {

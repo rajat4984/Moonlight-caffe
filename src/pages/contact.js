@@ -1,4 +1,5 @@
 import "../styles/contact.css";
+import footerFunction from "./footer";
 
 export default function contactFunction() {
   const content = document.querySelector("#content");
@@ -87,6 +88,9 @@ export default function contactFunction() {
   appendElement(contactMenu, [contactHeading, contactGrid]);
   appendElement(contactContainer, [contactMenu]);
   appendElement(content, [contactContainer]);
+
+  // ------------------------FOOTER-----------------------------
+  footerFunction()
 
   //Apending function
   function appendElement(el, arr) {
