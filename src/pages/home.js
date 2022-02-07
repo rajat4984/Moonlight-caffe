@@ -1,4 +1,5 @@
 import "../styles/home.css";
+import coffeeImage from "../assets/coffee.jpg";
 
 export default function homeFunction() {
   const content = document.querySelector("#content");
@@ -7,6 +8,8 @@ export default function homeFunction() {
   const sloganSection = document.createElement("div");
   const slogan = document.createElement("div");
   const img = document.createElement("img");
+  const myCoffeeImage = new Image();
+  myCoffeeImage.src = coffeeImage;
 
   slogan.textContent =
     " Everyone should believe in something. I believe I will have another coffee";
@@ -15,11 +18,11 @@ export default function homeFunction() {
 
   sloganSection.classList.add("slogan-section");
   slogan.classList.add("slogan");
-  img.classList.add("coffee-img");
+  myCoffeeImage.classList.add("coffee-img");
 
   content.appendChild(sloganSection);
   sloganSection.append(slogan);
-  sloganSection.append(img);
+  sloganSection.append(myCoffeeImage);
 
   // ----------------------TIMING SECTION ------------------------------
 
