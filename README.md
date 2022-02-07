@@ -1,5 +1,5 @@
 # Restaurant-page
-A restaurant page made with the help of Webpack,HTML,CSS,Javascript.
+A landing page made with the help of Webpack,HTML,CSS,Javascript.
 
 [demo 👈](https://rajat4984.github.io/Moonlight-caffe/)
 
